@@ -19,8 +19,7 @@ Si algo aquí la contradice, gana la especificación.
    ausencia de pruebas.
 3. **No se publica.** Proyecto personal, uso propio. Convertirlo en producto público exige
    reevaluar el riesgo legal (LO 2/1984, honor) — otra conversación, no una decisión de paso.
-4. **La clave de la API de Claude NUNCA se commitea.** Va en `local.properties` (ya
-   ignorado). El repo es público, ver "Pendientes" abajo.
+4. **La clave de la API de Claude NUNCA se commitea.** Va en `local.properties`, ya ignorado.
 5. **La etiqueta editorial de una fuente solo se guarda tras la confirmación de Alex**
    (`fuentes.confirmada = 1`). El sistema propone; Alex decide.
 
@@ -85,14 +84,18 @@ Tres cosas detectadas al montar el repo, aún sin comprobar con casos reales:
 
 ## Pendientes / abiertos
 
-- **El repo es público.** Choca con el "uso propio, NO publicar" de la especificación, y es
-  un riesgo real de cara a v1 (cualquier secreto commiteado por error se escanea en
-  segundos). Ponerlo en privado en Settings → General → Danger Zone.
-- La rama de trabajo es `claude/parallax-bias-analysis-app-drtsdb`, que además es la rama
-  por defecto del repo (fue la primera que se subió). Si prefieres `main`, se renombra.
+Dos cosas que solo puede hacer Alex desde la web de GitHub (no hay API disponible para
+ellas en las sesiones de Claude Code):
+
+- **Poner el repositorio en privado** — Settings → General → Danger Zone → Change
+  visibility. La especificación dice "uso propio, NO publicar", y de cara a v1 importa: los
+  repos públicos se escanean en busca de secretos en segundos.
+- **Poner `main` como rama por defecto** y borrar `claude/parallax-bias-analysis-app-drtsdb`
+  — Settings → Branches. `main` ya existe y tiene todo el contenido.
 
 ## Convenciones
 
+- La rama de trabajo es **`main`**.
 - Commits y documentación en español.
 - El histórico y la memoria de fuentes guardan **solo el resumen compacto**, nunca el
   cuerpo de los artículos de terceros (§8 de la especificación).

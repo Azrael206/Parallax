@@ -26,6 +26,7 @@ de Parallax ya redactada y cerrada.
 | `README.md` | Qué es, qué no es, estado por fases, cómo arrancar v0. |
 | `.gitignore` | Bloquea la clave de API y los artefactos de Android antes de que existan. |
 | `CLAUDE.md` | Contexto permanente para las sesiones de Claude Code en terminal. |
+| `docs/BITACORA.md` | Esto. |
 
 ### Decisiones que tomó Claude, no Alex
 
@@ -45,20 +46,26 @@ Marcadas aparte a propósito: son revertibles y no vienen de la especificación.
 
 ### Hallazgos abiertos
 
-1. **El repositorio es público**, y la especificación dice "uso propio, NO publicar".
-   Probablemente no era la intención. Importa de cara a v1: los repos públicos se escanean
-   en busca de secretos en segundos. Se cambia en Settings → General → Danger Zone.
-2. **La rama por defecto quedó como `claude/parallax-bias-analysis-app-drtsdb`**, porque
-   fue la primera que se subió a un repo vacío. Funciona; renombrarla a `main` es cosmético
-   y decisión de Alex.
-3. **Con una sola fuente, los puntos 3 y 4 del prompt se degradan** — sin una segunda
+1. **Con una sola fuente, los puntos 3 y 4 del prompt se degradan** — sin una segunda
    fuente no hay omisiones que comparar. Sin comprobar aún con casos reales.
-4. **El punto 7 (estado por afirmación) depende solo del conocimiento del modelo**, sin
+2. **El punto 7 (estado por afirmación) depende solo del conocimiento del modelo**, sin
    acceso a web. Si en los casos reales casi todo cae en `NO VERIFICABLE`, ese punto no
    aporta nada tal como está.
-5. **Si pasa lo anterior:** la API de Claude ofrece búsqueda web como herramienta de
+3. **Si pasa lo anterior:** la API de Claude ofrece búsqueda web como herramienta de
    servidor, facturada por Anthropic. No rompe la regla de "solo créditos de Claude
    Platform", pero sube el coste por análisis. Decisión de Alex, no automática.
+
+### Repositorio: privado y `main`
+
+Al cerrar la sesión, Alex pide poner el repo en privado y renombrar la rama a `main`.
+
+- **`main` creada** con todo el contenido, y pasa a ser la rama de trabajo.
+- **Sin hacer, requieren la web de GitHub** (las sesiones de Claude Code no tienen API para
+  ninguna de las dos): poner `main` como rama por defecto y borrar
+  `claude/parallax-bias-analysis-app-drtsdb`; y cambiar la visibilidad a privado.
+
+El repo nació público y con la rama `claude/…` de por defecto porque fue la primera que se
+subió a un repositorio vacío, no por decisión de nadie.
 
 ### Notas del entorno
 
