@@ -1,0 +1,23 @@
+# Claves — la de la API de Claude NUNCA se commitea
+local.properties
+*.env
+secrets.properties
+
+# Android / Gradle (para cuando llegue v1)
+.gradle/
+build/
+captures/
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# IDE
+.idea/
+*.iml
+.DS_Store
+
+# SQLite local
+*.db
+*.sqlite
+*.sqlite3
