@@ -55,6 +55,7 @@ el histórico.
 CLAUDE.md                     esto
 README.md                     resumen del proyecto y cómo arrancar v0
 docs/ESPECIFICACION.md        fuente de verdad
+docs/BITACORA.md              qué se hizo en cada sesión y por qué
 docs/esquema-datos.sql        esquema SQLite de v1 (referencia, aún sin usar)
 docs/v0-casos/                plantilla, índice y los casos de validación
 prompts/prompt-maestro.md     el cerebro (copia canónica)
@@ -96,3 +97,4 @@ Tres cosas detectadas al montar el repo, aún sin comprobar con casos reales:
 - El histórico y la memoria de fuentes guardan **solo el resumen compacto**, nunca el
   cuerpo de los artículos de terceros (§8 de la especificación).
 - Al añadir tablas o campos, mantener `docs/esquema-datos.sql` alineado con §7.
+- Al cerrar una sesión con cambios que importen, añadir la entrada en `docs/BITACORA.md`.
